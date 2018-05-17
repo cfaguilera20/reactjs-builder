@@ -94,7 +94,7 @@ class ContactData extends Component {
         loading: false
     };
 
-    orderHanfdler = event => {
+    orderHandler = event => {
         event.preventDefault();
         this.setState({ loading: true });
         const formData = {};
@@ -109,15 +109,6 @@ class ContactData extends Component {
             price: this.props.price,
             orderData: formData
         };
-        axios
-            .post("/orders.json", order)
-            .then(response => {
-                this.setState({ loading: false });
-                this.props.history.push("/");
-            })
-            .catch(error => {
-                this.setState({ loading: false });
-            });
     };
 
     checkValidity(value, rules) {
@@ -178,7 +169,7 @@ class ContactData extends Component {
         }
 
         let form = (
-            <form onSubmit={this.orderHanfdler}>
+            <form onSubmit={this.orderHandler}>
                 {formElementsArray.map(formElement => {
                     return (
                         <Input
