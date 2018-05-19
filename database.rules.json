@@ -1,6 +1,12 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+      "ingredients": {
+          ".read": true,
+          ".write": true
+      },
+      "orders": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+      }
   }
 }
