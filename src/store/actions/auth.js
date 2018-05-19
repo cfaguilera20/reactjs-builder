@@ -40,11 +40,13 @@ export const auth = (email, password, isSignup) => {
             .post(url, authData)
             .then(response => {
                 console.log(response);
-                dispatch(authSuccess(response.data.idToken, response.data.localId));
+                dispatch(
+                    authSuccess(response.data.idToken, response.data.localId)
+                );
             })
             .catch(error => {
                 console.log(error);
-                dispatch(authFail(error));
+                dispatch(authFail(error.response.data.error));
             });
     };
 };
