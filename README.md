@@ -1,6 +1,2 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with Create React App - [Link to Project](https://reactjs-builder.web.app/)
 
-##
-Link 
-
-[App](https://reactjs-builder.web.app/)
